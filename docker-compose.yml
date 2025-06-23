@@ -1,0 +1,32 @@
+
+services:
+
+  postgres:
+    restart: always
+    image: postgres:15.0-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - DEBUG=true
+      - POSTGRES_DB=accepto
+      - POSTGRES_PASSWORD=pw
+    volumes:
+      - ./modules/core/src/main/resources/tables.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    restart: always
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    environment:
+      - DEBUG=false
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30

@@ -1,0 +1,104 @@
+# accepto-licenses
+
+Category | License | Dependency | Notes
+--- | --- | --- | ---
+Apache | [Apache 2](http://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # shapeless3-deriving_3 # 3.4.3](https://typelevel.org/shapeless-3) | <notextile></notextile>
+Apache | [Apache 2.0](http://www.opensource.org/licenses/Apache-2.0) | [org.typelevel # squants_3 # 1.8.3](http://www.squants.com/) | <notextile></notextile>
+Apache | [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html) | [com.github.cb372 # cats-retry_3 # 4.0.0](https://cb372.github.io/cats-retry/) | <notextile></notextile>
+Apache | [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) | io.netty # netty-buffer # 4.1.115.Final | <notextile></notextile>
+Apache | [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) | io.netty # netty-codec # 4.1.115.Final | <notextile></notextile>
+Apache | [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) | io.netty # netty-common # 4.1.115.Final | <notextile></notextile>
+Apache | [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) | io.netty # netty-handler # 4.1.115.Final | <notextile></notextile>
+Apache | [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) | io.netty # netty-resolver # 4.1.115.Final | <notextile></notextile>
+Apache | [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) | io.netty # netty-transport # 4.1.115.Final | <notextile></notextile>
+Apache | [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) | io.netty # netty-transport-native-unix-common # 4.1.115.Final | <notextile></notextile>
+Apache | [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [io.projectreactor # reactor-core # 3.6.6](https://github.com/reactor/reactor-core) | <notextile></notextile>
+Apache | [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt) | [org.log4s # log4s_3 # 1.10.0](http://log4s.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [com.comcast # ip4s-core_3 # 3.5.0](https://github.com/Comcast/ip4s) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [com.comcast # ip4s-core_3 # 3.6.0](https://github.com/Comcast/ip4s) | <notextile></notextile>
+Apache | [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0) | [com.github.jwt-scala # jwt-core_3 # 10.0.1](https://jwt-scala.github.io/jwt-scala/) | <notextile></notextile>
+Apache | [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0) | [dev.profunktor # http4s-jwt-auth_3 # 2.0.2](https://http4s-jwt-auth.profunktor.dev/) | <notextile></notextile>
+Apache | [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0) | [dev.profunktor # redis4cats-core_3 # 1.7.2](https://redis4cats.profunktor.dev/) | <notextile></notextile>
+Apache | [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0) | [dev.profunktor # redis4cats-effects_3 # 1.7.2](https://redis4cats.profunktor.dev/) | <notextile></notextile>
+Apache | [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0) | [dev.profunktor # redis4cats-log4cats_3 # 1.7.2](https://redis4cats.profunktor.dev/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [io.circe # circe-core_3 # 0.14.10](https://github.com/circe/circe) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [io.circe # circe-generic_3 # 0.14.10](https://github.com/circe/circe) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [io.circe # circe-jawn_3 # 0.14.10](https://github.com/circe/circe) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [io.circe # circe-numbers_3 # 0.14.10](https://github.com/circe/circe) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [io.circe # circe-parser_3 # 0.14.10](https://github.com/circe/circe) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | [io.github.kitlangton # neotype-circe_3 # 0.3.15](https://github.com/kitlangton/neotype) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | [io.github.kitlangton # neotype-ciris_3 # 0.3.15](https://github.com/kitlangton/neotype) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | [io.github.kitlangton # neotype_3 # 0.3.15](https://github.com/kitlangton/neotype) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html) | [org.http4s # http4s-circe_3 # 0.23.30](https://http4s.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html) | [org.http4s # http4s-client_3 # 0.23.30](https://http4s.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html) | [org.http4s # http4s-core_3 # 0.23.30](https://http4s.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.http4s # http4s-crypto_3 # 0.2.4](https://github.com/http4s/http4s-crypto) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html) | [org.http4s # http4s-dsl_3 # 0.23.30](https://http4s.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html) | [org.http4s # http4s-ember-client_3 # 0.23.30](https://http4s.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html) | [org.http4s # http4s-ember-core_3 # 0.23.30](https://http4s.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html) | [org.http4s # http4s-ember-server_3 # 0.23.30](https://http4s.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html) | [org.http4s # http4s-jawn_3 # 0.23.30](https://http4s.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html) | [org.http4s # http4s-server_3 # 0.23.30](https://http4s.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | [org.scala-lang # scala-library # 2.13.15](https://www.scala-lang.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | [org.scala-lang # scala3-library_3 # 3.3.5](https://github.com/scala/scala3) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) | [org.scala-lang.modules # scala-collection-compat_3 # 2.11.0](http://www.scala-lang.org/) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # case-insensitive_3 # 1.4.0](https://typelevel.org/case-insensitive) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # case-insensitive_3 # 1.4.2](https://typelevel.org/case-insensitive) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # cats-effect-kernel_3 # 3.5.4](https://github.com/typelevel/cats-effect) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # cats-effect-kernel_3 # 3.5.7](https://github.com/typelevel/cats-effect) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # cats-effect-std_3 # 3.5.4](https://github.com/typelevel/cats-effect) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # cats-effect-std_3 # 3.5.7](https://github.com/typelevel/cats-effect) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # cats-effect_3 # 3.5.4](https://github.com/typelevel/cats-effect) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # cats-effect_3 # 3.5.7](https://github.com/typelevel/cats-effect) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # jawn-fs2_3 # 2.4.0](https://github.com/typelevel/jawn-fs2) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # kittens_3 # 3.4.0](https://github.com/typelevel/kittens) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # literally_3 # 1.1.0](https://github.com/typelevel/literally) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # literally_3 # 1.2.0](https://github.com/typelevel/literally) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # log4cats-core_3 # 2.7.0](https://typelevel.org/log4cats) | <notextile></notextile>
+Apache | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) | [org.typelevel # log4cats-slf4j_3 # 2.7.0](https://typelevel.org/log4cats) | <notextile></notextile>
+Apache | [The Apache Software License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt) | com.twitter # hpack # 1.0.2 | <notextile></notextile>
+BSD | [BSD-3-Clause](https://github.com/scodec/scodec-bits/blob/main/LICENSE) | [org.scodec # scodec-bits_3 # 1.1.38](https://github.com/scodec/scodec-bits) | <notextile></notextile>
+BSD | [BSD-3-Clause](https://github.com/scodec/scodec-cats/blob/main/LICENSE) | [org.scodec # scodec-cats_3 # 1.2.0](https://github.com/scodec/scodec-cats) | <notextile></notextile>
+BSD | [BSD-3-Clause](https://github.com/scodec/scodec/blob/main/LICENSE) | [org.scodec # scodec-core_3 # 2.2.2](https://github.com/scodec/scodec) | <notextile></notextile>
+BSD | [BSD-3-Clause](https://github.com/typelevel/twiddles/blob/main/LICENSE) | [org.typelevel # twiddles-core_3 # 0.6.2](https://github.com/typelevel/twiddles) | <notextile></notextile>
+BSD | [The 2-Clause BSD License](https://opensource.org/licenses/BSD-2-Clause) | com.ongres.scram # client # 2.1 | <notextile></notextile>
+BSD | [The 2-Clause BSD License](https://opensource.org/licenses/BSD-2-Clause) | com.ongres.scram # common # 2.1 | <notextile></notextile>
+BSD | [The 2-Clause BSD License](https://opensource.org/licenses/BSD-2-Clause) | com.ongres.stringprep # saslprep # 1.1 | <notextile></notextile>
+BSD | [The 2-Clause BSD License](https://opensource.org/licenses/BSD-2-Clause) | com.ongres.stringprep # stringprep # 1.1 | <notextile></notextile>
+LGPL | [GNU Lesser General Public License](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html) | ch.qos.logback # logback-classic # 1.2.11 | <notextile></notextile>
+LGPL | [GNU Lesser General Public License](http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html) | ch.qos.logback # logback-core # 1.2.11 | <notextile></notextile>
+MIT | [MIT](http://opensource.org/licenses/MIT) | [co.fs2 # fs2-core_3 # 3.11.0](https://typelevel.org/fs2) | <notextile></notextile>
+MIT | [MIT](http://opensource.org/licenses/MIT) | [co.fs2 # fs2-io_3 # 3.10.2](https://typelevel.org/fs2) | <notextile></notextile>
+MIT | [MIT](http://opensource.org/licenses/MIT) | [co.fs2 # fs2-io_3 # 3.11.0](https://typelevel.org/fs2) | <notextile></notextile>
+MIT | [MIT](http://opensource.org/licenses/MIT) | [com.beachape # enumeratum-macros_3 # 1.7.5](https://github.com/lloydmeta/enumeratum) | <notextile></notextile>
+MIT | [MIT](http://opensource.org/licenses/MIT) | [com.beachape # enumeratum_3 # 1.7.5](https://github.com/lloydmeta/enumeratum) | <notextile></notextile>
+MIT | [MIT](https://github.com/redis/lettuce/blob/main/LICENSE) | [io.lettuce # lettuce-core # 6.5.1.RELEASE](http://github.com/lettuce-io/lettuce-core) | <notextile></notextile>
+MIT | [MIT](http://opensource.org/licenses/MIT) | [org.tpolecat # natchez-core_3 # 0.3.5](https://github.com/typelevel/natchez) | <notextile></notextile>
+MIT | [MIT](https://opensource.org/licenses/MIT) | [org.tpolecat # skunk-circe_3 # 0.6.4](https://typelevel.org/skunk) | <notextile></notextile>
+MIT | [MIT](https://opensource.org/licenses/MIT) | [org.tpolecat # skunk-core_3 # 0.6.4](https://typelevel.org/skunk) | <notextile></notextile>
+MIT | [MIT](http://opensource.org/licenses/MIT) | [org.tpolecat # sourcepos_3 # 1.1.0](https://github.com/tpolecat/sourcepos) | <notextile></notextile>
+MIT | [MIT](https://opensource.org/licenses/MIT) | [org.typelevel # alleycats-core_3 # 2.12.0](https://typelevel.org/cats) | <notextile></notextile>
+MIT | [MIT](https://opensource.org/licenses/MIT) | [org.typelevel # cats-core_3 # 2.13.0](https://typelevel.org/cats) | <notextile></notextile>
+MIT | [MIT](https://opensource.org/licenses/MIT) | [org.typelevel # cats-kernel_3 # 2.13.0](https://typelevel.org/cats) | <notextile></notextile>
+MIT | [MIT](https://opensource.org/licenses/MIT) | [org.typelevel # cats-parse_3 # 1.0.0](https://typelevel.org/cats-parse) | <notextile></notextile>
+MIT | [MIT](http://opensource.org/licenses/MIT) | [org.typelevel # jawn-parser_3 # 1.6.0](https://github.com/typelevel/jawn) | <notextile></notextile>
+MIT | [MIT](https://opensource.org/licenses/MIT) | [org.typelevel # keypool_3 # 0.4.10](https://typelevel.org/keypool) | <notextile></notextile>
+MIT | [MIT](http://opensource.org/licenses/MIT) | [org.typelevel # vault_3 # 3.6.0](https://typelevel.org/vault) | <notextile></notextile>
+MIT | [MIT License](http://www.opensource.org/licenses/mit-license.php) | [is.cir # ciris-enumeratum_3 # 3.7.0](https://cir.is) | <notextile></notextile>
+MIT | [MIT License](http://www.opensource.org/licenses/mit-license.php) | [is.cir # ciris_3 # 3.7.0](https://cir.is) | <notextile></notextile>
+MIT | [MIT License](http://www.opensource.org/licenses/mit-license.php) | [org.slf4j # slf4j-api # 1.7.36](http://www.slf4j.org) | <notextile></notextile>
+MIT | [MIT-0](https://spdx.org/licenses/MIT-0.html) | [org.reactivestreams # reactive-streams # 1.0.4](http://www.reactive-streams.org/) | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # auth-jwt-pdi_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # cache-redis-redis4cats_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # client-http-http4s_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # config-env-ciris_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # core-adapters_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # core-headers_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # core_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # cryptography-jsr105-api_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # delivery-http-http4s_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # json-circe_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # persistence-db-postgres-skunk_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | dev.z # retries-cats-retry_3 # 0.1.0-SNAPSHOT | <notextile></notextile>
+unrecognized | [none specified](none specified) | javax.xml.crypto # jsr105-api # 1.0.1 | <notextile></notextile>
+

@@ -1,0 +1,1306 @@
+{
+	"info": {
+		"_postman_id": "7879f2f6-da08-4835-8248-3b06d5d4e882",
+		"name": "Accepto",
+		"description": "Collection for testing the authentication, organization, and invoice API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21591013"
+	},
+	"item": [
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "Create Single Invoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": {\n    \"amount\": 123.45,\n    \"currency\": \"USD\"\n  },\n  \"buyer\": \"ACME Inc\",\n  \"seller\": \"Some Vendor LLC\",\n  \"date\": \"2025-03-01\",\n  \"dueDate\": \"2025-03-15\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/invoices",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "invoices"]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Single Invoice",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": {\n    \"amount\": 123.45,\n    \"currency\": \"USD\"\n  },\n  \"buyer\": \"ACME Inc\",\n  \"seller\": \"Some Vendor LLC\",\n  \"date\": \"2025-03-01\",\n  \"dueDate\": \"2025-03-15\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/invoices",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "invoices"]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:37:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "\"32889a2b-23ba-40e6-b62f-b31f49355dd5\""
+						}
+					]
+				},
+				{
+					"name": "Create Multiple Invoices",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"amount\": {\n      \"amount\": 123.45,\n      \"currency\": \"USD\"\n    },\n    \"buyer\": \"ACME Inc\",\n    \"seller\": \"Some Vendor LLC\",\n    \"date\": \"2025-03-01\",\n    \"dueDate\": \"2025-03-15\"\n  },\n  {\n    \"amount\": {\n      \"amount\": 678.90,\n      \"currency\": \"USD\"\n    },\n    \"buyer\": \"XYZ Corp\",\n    \"seller\": \"Another Vendor\",\n    \"date\": \"2025-03-02\",\n    \"dueDate\": \"2025-03-16\"\n  }\n]"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/invoices/batch",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "invoices", "batch"]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Invoice by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/invoices/:invoiceId",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "invoices", ":invoiceId"],
+							"variable": [
+								{
+									"key": "invoiceId",
+									"value": "{{invoiceId}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find Invoice by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/invoices/:invoiceId",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "invoices", ":invoiceId"],
+									"variable": [
+										{
+											"key": "invoiceId",
+											"value": "{{invoiceId}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:37:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "266"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"32889a2b-23ba-40e6-b62f-b31f49355dd5\",\n    \"organization\": {\n        \"id\": \"cd5e9db6-176e-4afd-9070-052a45e34226\",\n        \"name\": \"My Organization11\"\n    },\n    \"amount\": {\n        \"amount\": 123.45,\n        \"currency\": \"USD\"\n    },\n    \"buyer\": \"ACME Inc\",\n    \"seller\": \"Some Vendor LLC\",\n    \"date\": \"2025-03-01\",\n    \"dueDate\": \"2025-03-15\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Stream All Invoices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/invoices",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "invoices"]
+						}
+					},
+					"response": [
+						{
+							"name": "Stream All Invoices",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/invoices",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "invoices"]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:38:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"32889a2b-23ba-40e6-b62f-b31f49355dd5\",\n        \"organization\": {\n            \"id\": \"cd5e9db6-176e-4afd-9070-052a45e34226\",\n            \"name\": \"My Organization11\"\n        },\n        \"amount\": {\n            \"amount\": 123.45,\n            \"currency\": \"USD\"\n        },\n        \"buyer\": \"ACME Inc\",\n        \"seller\": \"Some Vendor LLC\",\n        \"date\": \"2025-03-01\",\n        \"dueDate\": \"2025-03-15\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Stream Invoices By Date Range",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/invoices/date?start={{startDate}}&end={{endDate}}",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "invoices", "date"],
+							"query": [
+								{
+									"key": "start",
+									"value": "{{startDate}}"
+								},
+								{
+									"key": "end",
+									"value": "{{endDate}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Stream Invoices By Date Range",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/invoices/date?start={{startDate}}&end={{endDate}}",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "invoices", "date"],
+									"query": [
+										{
+											"key": "start",
+											"value": "{{startDate}}"
+										},
+										{
+											"key": "end",
+											"value": "{{endDate}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:38:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"32889a2b-23ba-40e6-b62f-b31f49355dd5\",\n        \"organization\": {\n            \"id\": \"cd5e9db6-176e-4afd-9070-052a45e34226\",\n            \"name\": \"My Organization11\"\n        },\n        \"amount\": {\n            \"amount\": 123.45,\n            \"currency\": \"USD\"\n        },\n        \"buyer\": \"ACME Inc\",\n        \"seller\": \"Some Vendor LLC\",\n        \"date\": \"2025-03-01\",\n        \"dueDate\": \"2025-03-15\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Stream Invoices By IDs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  \"32889a2b-23ba-40e6-b62f-b31f49355dd5\"\n]"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/invoices/by-ids",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "invoices", "by-ids"]
+						}
+					},
+					"response": [
+						{
+							"name": "Stream Invoices By IDs",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  \"32889a2b-23ba-40e6-b62f-b31f49355dd5\"\n]"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/invoices/by-ids",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "invoices", "by-ids"]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:39:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"32889a2b-23ba-40e6-b62f-b31f49355dd5\",\n        \"organization\": {\n            \"id\": \"cd5e9db6-176e-4afd-9070-052a45e34226\",\n            \"name\": \"My Organization11\"\n        },\n        \"amount\": {\n            \"amount\": 123.45,\n            \"currency\": \"USD\"\n        },\n        \"buyer\": \"ACME Inc\",\n        \"seller\": \"Some Vendor LLC\",\n        \"date\": \"2025-03-01\",\n        \"dueDate\": \"2025-03-15\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Create User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"testuser1\",\n  \"password\": \"secret\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/auth/users",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "auth", "users"]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"testuser11\",\n  \"password\": \"secret\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/auth/users",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "auth", "users"]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:31:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDEwMTIyNjAsImlhdCI6MTc0MDk5MDY2MCwic3ViIjoiZjI3NWQ1N2QtMmI4Ny00YmRkLWIyNWQtMDEyZGFhMWVlYmJkIn0.w4i6waY5ixFIlTf0VU2jLbx79QDaTQhW7YasXR4sHtY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"testuser11\",\n  \"password\": \"secret\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/auth/login",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "auth", "login"]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"testuser11\",\n  \"password\": \"secret\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/auth/login",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "auth", "login"]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:31:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDEwMTIyNjAsImlhdCI6MTc0MDk5MDY2MCwic3ViIjoiZjI3NWQ1N2QtMmI4Ny00YmRkLWIyNWQtMDEyZGFhMWVlYmJkIn0.w4i6waY5ixFIlTf0VU2jLbx79QDaTQhW7YasXR4sHtY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/auth/logout",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "auth", "logout"]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/auth/logout",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "auth", "logout"]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:32:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Logout (Session)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/auth/logout1",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "auth", "logout1"]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout (Session)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/auth/logout1",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "auth", "logout1"]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:33:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Set Organization",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"orgId\": \"{{orgId}}\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/auth/org",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "auth", "org"]
+						}
+					},
+					"response": [
+						{
+							"name": "Set Organization",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"orgId\": \"{{orgId}}\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/auth/org",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "auth", "org"]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:33:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Organizations",
+			"item": [
+				{
+					"name": "Create Organization",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"My Organization11\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/org/create",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "org", "create"]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Organization",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"My Organization11\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/org/create",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "org", "create"]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:33:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"cd5e9db6-176e-4afd-9070-052a45e34226\",\n    \"name\": \"My Organization11\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Member to Organization",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userName\": \"testuser1\",\n  \"newRole\": \"member\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/org/addMember",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "org", "addMember"]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Member to Organization",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userName\": \"testuser1\",\n  \"newRole\": \"member\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/org/addMember",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "org", "addMember"]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:36:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update Membership in Organization",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userName\": \"testuser1\",\n  \"newRole\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/org/updateMembership",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "org", "updateMembership"]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Membership in Organization",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userName\": \"testuser1\",\n  \"newRole\": \"admin\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/org/updateMembership",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "org", "updateMembership"]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:36:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get Membership by Organization ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/org/membership/:orgId",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "org", "membership", ":orgId"],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{orgId}}"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Membership by Organization ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/org/membership/:orgId",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "org", "membership", ":orgId"],
+									"variable": [
+										{
+											"key": "orgId",
+											"value": "{{orgId}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:35:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "177"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": \"980b6903-7c7a-4d0f-ab93-fa1b2c101cc8\",\n        \"name\": \"testuser11\"\n    },\n    \"organization\": {\n        \"id\": \"cd5e9db6-176e-4afd-9070-052a45e34226\",\n        \"name\": \"My Organization11\"\n    },\n    \"role\": \"admin\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Stream All Members for Organization",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/org/members",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "org", "members"]
+						}
+					},
+					"response": [
+						{
+							"name": "Stream All Members for Organization",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/org/members",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "org", "members"]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:35:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"user\": {\n            \"id\": \"980b6903-7c7a-4d0f-ab93-fa1b2c101cc8\",\n            \"name\": \"testuser11\"\n        },\n        \"organization\": {\n            \"id\": \"cd5e9db6-176e-4afd-9070-052a45e34226\",\n            \"name\": \"My Organization11\"\n        },\n        \"role\": \"admin\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Stream All Memberships for User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/{{version}}/org/memberships",
+							"host": ["{{baseUrl}}"],
+							"path": ["{{version}}", "org", "memberships"]
+						}
+					},
+					"response": [
+						{
+							"name": "Stream All Memberships for User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/{{version}}/org/memberships",
+									"host": ["{{baseUrl}}"],
+									"path": ["{{version}}", "org", "memberships"]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Mar 2025 08:35:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"user\": {\n            \"id\": \"980b6903-7c7a-4d0f-ab93-fa1b2c101cc8\",\n            \"name\": \"testuser11\"\n        },\n        \"organization\": {\n            \"id\": \"cd5e9db6-176e-4afd-9070-052a45e34226\",\n            \"name\": \"My Organization11\"\n        },\n        \"role\": \"admin\"\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [""]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [""]
+			}
+		}
+	]
+}
